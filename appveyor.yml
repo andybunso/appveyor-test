@@ -17,22 +17,21 @@ install:
   - cd ..
   
   # set up boost directory 
-  - ( if not exist test md test ) && cd test
-  - 7z x "%DOWNLOAD_DIR%\boost*.7z" >NUL 
-  - cd boost*
-  - SET BOOST_DIR=%cd% 
+#  - ( if not exist test md test ) && cd test
+#  - 7z x "%DOWNLOAD_DIR%\boost*.7z" >NUL 
+#  - cd boost*
+#  - SET BOOST_DIR=%cd% 
   
   # copy Boost.Object 
-  - XCOPY "%ROOT_DIR%\boost" "%cd%\boost" /E /Y
-  - XCOPY "%ROOT_DIR%\libs" "%cd%\libs" /E /Y
+#  - XCOPY "%ROOT_DIR%\boost" "%cd%\boost" /E /Y
+#  - XCOPY "%ROOT_DIR%\libs" "%cd%\libs" /E /Y
   
   # install boost 
-  - bootstrap
+#  - bootstrap
     
 build: off
 
 test_script:
-  - cd "%BOOST_DIR\libs\object\test"
-  - '"%BOOST_DIR%\bjam" toolset=msvc-12.0 variant=debug,release address-model=64,32 architecture=x86 include="%BOOST_DIR%" "%cd%"'
+  - echo bla
   
 deploy: off 
