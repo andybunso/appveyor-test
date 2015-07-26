@@ -3,7 +3,7 @@ clone_depth: 200
 install:
   - appveyor DownloadFile http://downloads.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.7z
   - dir
-  - 7z x boost*.7z
+  - 7z x boost*.7z >NUL
   - dir
   - cd boost*
   - bootstrap.bat
